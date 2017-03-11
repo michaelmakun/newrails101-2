@@ -22,8 +22,11 @@
           <td><%= group.updated_at %></td>
         </tr>
       <% end %>
-
     </tbody>
-
   </table>
+
+  <div class="text-center col-md-12 pagination">
+    <%= will_paginate @groups, renderer: BootstrapPagination::Rails %>
+  </div>
+
 </div>
