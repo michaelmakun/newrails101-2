@@ -15,7 +15,7 @@
         <tr>
           <td>#</td>
           <td><%= link_to(group.title, group_path(group)) %></td>
-          <td><%= link_to group.description %></td>
+          <td><%= group.description %></td>
           <td>
             <%= link_to("编缉", edit_group_path(group), class:"btn btn-sm btn-success") %>
             <%= link_to("删除", group_path(group),      class:"btn btn-sm btn-danger",
