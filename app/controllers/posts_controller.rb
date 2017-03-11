@@ -6,6 +6,11 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+    @group = Group.find(params[:group_id])
+    @post = Post.find(params[:id])
+  end
+
   def edit
     @group = Group.find(params[:group_id])
     @post = Post.find(params[:id])
