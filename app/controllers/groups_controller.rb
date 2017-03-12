@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
   before_action :find_group_and_check_permission, only: [:edit, :update, :destroy]
 
   def index
-    @groups = Group.all.paginate(:page => params[:page], :per_page => 5)
+    @groups = Group.all.recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
